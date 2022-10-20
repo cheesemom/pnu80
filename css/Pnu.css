@@ -1,0 +1,698 @@
+span.blue {
+    color: #004C86;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* Header */
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 1900px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #f9f9f9;
+    line-height: 65px;
+    transition: 0.5s;
+    border-bottom: 1px solid transparent;
+    z-index: 999;
+}
+
+.Header:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #444444;
+}
+
+.Header.on {
+    background: rgba(255, 255, 255, 1);
+    color: #444444;
+    line-height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Header h1 {
+    float: left;
+    margin: 0 0 0 340px;
+    font-size: 0;
+}
+
+.Header h1 a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 171px;
+    height: 42px;
+    background: url(../img/logo_w.png);
+}
+
+.Header:hover h1 a {
+    background: url(../img/logo_a.png);
+}
+
+.Header.on h1 a {
+    background: url(../img/logo_a.png);
+}
+
+.Header .Gnb {
+    float: right;
+    margin: 0 340px 0 0;
+}
+
+.Header .Gnb>ul>li {
+    float: left;
+}
+
+.Header .Gnb>ul>li>a {
+    position: relative;
+    display: block;
+    padding: 0 35px;
+    font-size: 17px;
+}
+
+.Header .Gnb>ul>li>a::after {
+    content: "";
+    position: absolute;
+    left: 35px;
+    right: 100%;
+    bottom: -1px;
+    height: 4px;
+    background: #004C86;
+    transition: 0.3s;
+}
+
+.Header .Gnb>ul>li>a:hover::after {
+    right: 35px;
+}
+
+.Header .TopBanner {
+    overflow: hidden;
+    height: 35px;
+    transition: 0.4s;
+    line-height: 1.2;
+    border-bottom: 1px solid #d6d6d4;
+}
+
+.Header .TopBanner .inner {
+    position: relative;
+    padding: 10px;
+}
+
+.Header .TopBanner.on {
+    height: 0;
+}
+
+.Header .TopBanner .top_menu {
+    display: flex;
+    gap: 30px;
+    font-size: 13px;
+    font-weight: 100;
+    float: right;
+    margin: 0 350px 0 0;
+}
+
+.Header .top_menu li {
+    position: relative;
+}
+
+.Header .top_menu li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 1px;
+    height: 10px;
+    background: #d6d6d4;
+    transform: translateY(-50%);
+}
+
+
+
+/* Main */
+.video {
+    width: 100%;
+    padding: 0 0 200px 0;
+}
+
+
+
+/* PNU */
+.pnu {
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.6px;
+    padding: 80px 250px 280px 250px;
+}
+
+.pnu h2 {
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.pnu p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 44px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.tabBox {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+}
+
+.tabMenu>ul {
+    display: flex;
+}
+
+.tabMenu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    flex: 1;
+    background: #f3f6f8be;
+}
+
+.tabMenu li.active {
+    font-weight: 500;
+    border-bottom: none;
+    background: #fff;
+}
+
+.tabMenu li a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #444444;
+}
+
+.tabContent {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+.tabContent>.con1,
+.con2,
+.con3,
+.con4 {
+    padding: 10px 20px 0 20px;
+    width: 100%;
+}
+
+.tabContent li {
+    border-bottom: 1px solid #bbb;
+    height: 45px;
+    line-height: 2.5;
+}
+
+.tabContent li span {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    float: left;
+}
+
+.tabContent li p {
+    display: inline-block;
+    margin-left: 25px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.tabContent li strong {
+    margin-right: 20px;
+    font-size: 11px;
+    color: #959595;
+    float: right;
+}
+
+.allBox {
+    display: flex;
+}
+
+.infoBox {
+    display: flex;
+    margin-left: 80px;
+    text-align: center;
+}
+
+
+.infoBox li {
+    position: relative;
+}
+
+.infoBox li .caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.infoBox .caption {
+    position: absolute;
+    top: 50%;
+    padding-top: 50px;
+    left: 50%;
+    transition: 1s ease;
+    opacity: 0;
+    color: white;
+    letter-spacing: 0.6px;
+}
+
+.infoBox .caption img {
+    margin-bottom: 15px;
+}
+
+.infoBox .caption p {
+    font-size: 15px;
+}
+
+.infoBox .caption span {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.infoBox .caption .image {
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+.infoBox .caption img {
+    transition: 0.4s;
+}
+
+.infoBox .caption:hover img {
+    transform: scale(1.2);
+}
+
+
+
+/* Recruit */
+.recruit {
+    background: url(../img/recruit.jpg) no-repeat center center/cover;
+    height: 310px;
+    color: white;
+    letter-spacing: 0.6px;
+    text-align: left;
+    padding: 79px 95px 80px 94px;
+}
+
+.recruit h4 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.recruit p {
+    line-height: 48px;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.recruit .ad a {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid white;
+    color: white;
+    width: 120px;
+    height: 40px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+}
+
+
+
+/* Focus */
+.focus {
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding: 180px 210px 80px 210px;
+}
+
+.focus h2 {
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 55px;
+}
+
+.focus .swiper .title_date {
+    font-size: 11px;
+    font-weight: 300;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.focus .swiper .title {
+    font-size: 16px;
+    margin: 20px 0 15px 0;
+}
+
+.focus .swiper .title_des {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+
+
+/* Research */
+.research {
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding: 159px 250px 158px 250px;
+}
+
+.research h2 {
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.research p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 44px;
+}
+
+
+/* .research .global_research {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.research .global_research .image {
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+.research .global_research figure img {
+    transition: 0.4s;
+}
+
+.research .global_research figure:hover img {
+    transform: scale(1.2);
+}
+
+.research .global_research .des {
+    position: relative;
+    font-size: 14px;
+    margin: 0 0 30px 0;
+}
+
+.research .global_research .des::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 40px;
+    background: #0d4795;
+}
+
+.research .detail {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid #004C86;
+    color: #004C86;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    padding: 12px 24px 12px 24px;
+} */
+
+
+
+.research .health_wrap {
+    padding-right: 29px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.research .health_wrap a {
+    position: relative;
+}
+
+.research .health_wrap p.h_img {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border-radius: 25px;
+}
+
+.research .health_wrap .helth_cont a p.h_img span {
+    position: absolute;
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .3s ease-in-out;
+}
+
+.research .health_wrap .helth_cont a p.h_img:hover span {
+    transform: translateX(-50%) scale(1.02);
+}
+
+.research .helth_cont a p.h_img span img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.research .helth_cont a p.h_txt {
+    position: absolute;
+    top: 310px;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+    width: 270px;
+    height: 75px;
+}
+
+.research .health_wrap .helth_cont a p.h_txt .h_des {
+    overflow: hidden;
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -.45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+/* 화살표 수정 */
+.research .slick-arrow {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    background: none;
+    text-indent: -9999em;
+    border: none;
+}
+
+.research .slick-prev {
+    width: 40px;
+    height: 40px;
+    top: 40%;
+    left: -62px;
+    background: url(../img/ico_arrow40x40_2.png) no-repeat 0 0;
+}
+
+.research .slick-prev:hover {
+    background-position: 0px -40px;
+}
+
+.research .slick-next {
+    width: 40px;
+    height: 40px;
+    top: 40%;
+    right: -32px;
+    background: url(../img/ico_arrow40x40_2.png) no-repeat -40px 0;
+}
+
+.research .slick-next:hover {
+    background-position: -40px -40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Campus */
+.campus {
+    padding: 58px 0 163px 0;
+}
+
+.campus h2 {
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.campus .count {
+    background: url(../img/campus.jpg) no-repeat center center/cover;
+    height: 550px;
+    letter-spacing: 0.6px;
+    padding: 210px 208px 210px 207px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+    font-style: italic;
+}
+
+.count-num {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: #004C86;
+}
+
+.ja {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+/* Footer */
+.Footer {
+    border-top: 1px solid white;
+    font-weight: 300;
+}
+
+.Footer .menu {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    line-height: 2.4;
+    gap: 30px;
+    background: #004C86;
+    color: white;
+}
+
+.Footer .menu li {
+    position: relative;
+}
+
+.Footer .menu li~li::before {
+    content: "";
+    width: 0.5px;
+    height: 12px;
+    width: 1px;
+    background: #d6d6d4;
+    opacity: 0.5;
+    position: absolute;
+    top: 25%;
+    left: -14%;
+    bottom: 0;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+.Footer .menu li a {
+    display: block;
+    font-size: 15px;
+    padding: 13px;
+}
+
+.Footer button {
+    width: 60px;
+    height: 60px;
+    right: 0;
+    top: -1px;
+    transition: all .3s ease;
+    font-size: 12px;
+    padding-top: 20px;
+    border: 1px solid #d6d6d4;
+    color: white;
+    background: #004C86 url(../img/topBtn.png) no-repeat 50% 18px;
+}
+
+.Footer .f_bottom {
+    display: flex;
+    padding-left: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 43px 0 43px 0;
+}
+
+.Footer .f_logo {
+    margin-right: 50px;
+}
+
+.Footer .capmus_info {
+    text-align: left;
+    margin-right: 100px;
+}
+
+.Footer .capmus_info p {
+    font-size: 12px;
+    margin-bottom: 11px;
+}
+
+.Footer .copyright {
+    color: #999;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.Footer .sponsor {
+    display: flex;
+    gap: 15px;
+}
