@@ -1,7 +1,7 @@
 $(function () {
 
 
-    //탭박스
+    //tabBox
     $(function () {
         var content = $('.tabContent>div');
         var menu = $('.tabMenu li');
@@ -17,7 +17,7 @@ $(function () {
 
 
 
-    //포커스 뉴스 스와이퍼
+    //Focus news swiper
     new Swiper('.focus .swiper', {
         direction: 'horizontal',
         autoplay: {
@@ -30,7 +30,7 @@ $(function () {
 
 
 
-    //자바 숫자카운트
+    //java count
     $('.count-num').each(function () { // .count-num에 각각 적용
         var $this = $(this),
             countTo = $this.attr('data-count');
@@ -59,7 +59,7 @@ $(function () {
 
 
 
-    //푸터 토글
+    //Footer toggle
     $('.Footer .ft_top .right li').on('click', function () {
         var idx = $(this).index(); // 0,1,2
         if ($(this).hasClass('on')) {
@@ -73,66 +73,36 @@ $(function () {
 
 
 
-    //투탑
+    //Totop
     $('.btn').on('click', function () {
         $('html,body').animate({ scrollTop: 0 }, 200)
     });
 
 
 
-
-
-
-
-
-
-    /* health_wrap */
-    $('.health_wrap').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-
-        // 반응형
-        responsive: [{
-            breakpoint: 1220,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 1020,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 960,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        },
-        ]
+    //Research slide
+    $('.center_slider').on('init reInit afterChange', function (e, s, c) {
+        console.log(s.slideCount);
+        var current = $('.center_slider .slick-current');
+        current.addClass('on').siblings().removeClass('on');
+        console.log(current);
+        $('.research .num').html((c ? c : 0) + 1 + '<span> / 0' + s.slideCount + '</span>');
+        $('.content_box>div').eq(c).addClass('on').siblings().removeClass('on');
     });
 
-    $('.helth_cont>a').click(function (e) {
-        e.preventDefault();
+    $('.center_slider').slick({
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        centerPadding: '300px',
     });
 
-
-
-
-
-
+    $('.research .slide_handler i:first-child').on('click', function () {
+        $('.center_slider').slick('slickPrev')
+    });
+    $('.research .slide_handler i:last-child').on('click', function () {
+        $('.center_slider').slick('slickNext')
+    })
 
 
 
