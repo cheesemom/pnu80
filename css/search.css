@@ -1,0 +1,40 @@
+.gnb>ul {
+    display: flex;
+}
+
+.header_menu {
+    position: absolute;
+    left: 0;
+    top: 86px;
+    width: 100%;
+    background: #fff;
+}
+
+.header_menu>div {
+    display: none;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.header .header_menu>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_menu ul li {
+    line-height: 3;
+}
+
+.header_menu a {
+    color: #222;
+    text-decoration: none;
+}
+
+.header .header_menu ul li strong a {
+    position: relative;
+}
+
+.header_menu ul li strong a:hover {
+    color: crimson;
+}

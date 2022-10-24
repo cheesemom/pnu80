@@ -57,37 +57,6 @@ body {
     background: url(../img/logo_a.png);
 }
 
-.Header .Gnb {
-    float: right;
-    margin: 0 340px 0 0;
-}
-
-.Header .Gnb>ul>li {
-    float: left;
-}
-
-.Header .Gnb>ul>li>a {
-    position: relative;
-    display: block;
-    padding: 0 35px;
-    font-size: 17px;
-}
-
-.Header .Gnb>ul>li>a::after {
-    content: "";
-    position: absolute;
-    left: 35px;
-    right: 100%;
-    bottom: -1px;
-    height: 4px;
-    background: #004C86;
-    transition: 0.3s;
-}
-
-.Header .Gnb>ul>li>a:hover::after {
-    right: 35px;
-}
-
 .Header .TopBanner {
     overflow: hidden;
     height: 35px;
@@ -131,10 +100,88 @@ body {
 
 
 
+.Header .Gnb {
+    float: right;
+    margin: 0 340px 0 0;
+}
+
+.Header .Gnb>ul>li {
+    float: left;
+}
+
+.Header .Gnb>ul>li>a {
+    position: relative;
+    display: block;
+    padding: 0 35px;
+    font-size: 17px;
+}
+
+.Header .Gnb>ul>li>a::after {
+    content: "";
+    position: absolute;
+    left: 35px;
+    right: 100%;
+    bottom: -1px;
+    height: 4px;
+    background: #004C86;
+    transition: 0.3s;
+}
+
+.Header .Gnb>ul>li>a:hover::after {
+    right: 35px;
+}
+
+
+
 /* Main */
 .video {
     width: 100%;
 }
+
+.search-box input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ababab;
+    padding: 5px 0;
+    position: relative;
+}
+
+.search-box button {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    position: absolute;
+}
+
+.search-box button i {
+    color: white;
+    font-size: 28px;
+}
+
+.search-box {
+    position: absolute;
+    bottom: 14.5%;
+    right: 0;
+    z-index: 10;
+    width: calc(50% - 300px);
+    padding: 30px 40px 10px;
+    background-color: #004C86;
+    color: white;
+    height: 120px;
+    font-size: 16px;
+}
+
+.search-box .tags {
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.search-box .tags a {
+    padding-right: 15px;
+}
+
 
 
 
@@ -251,7 +298,6 @@ body {
 
 .infoBox {
     display: flex;
-
     text-align: center;
 }
 
@@ -314,7 +360,7 @@ body {
 .recruit h4 {
     font-size: 31px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .recruit p {
@@ -515,8 +561,8 @@ body {
 
 .research .slick-dots li {
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     background: #dddddd;
     border-radius: 50%;
     margin: 0 9px;
@@ -563,14 +609,14 @@ body {
 
 .count-num {
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     color: #004C86;
 }
 
 .ja {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
     text-align: center;
     margin-bottom: 25px;
 }

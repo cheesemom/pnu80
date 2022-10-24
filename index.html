@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/Pnu.css">
 </head>
@@ -36,7 +37,7 @@
             </h1>
 
             <nav class="Gnb">
-                <ul class="main_menu">
+                <ul class="one">
                     <li><a href="#!">대학소개</a></li>
                     <li><a href="#!">입학/취업</a></li>
                     <li><a href="#!">연구/산학</a></li>
@@ -56,6 +57,30 @@
                         <source src="./img/screen_Trim.mp4" type="video/mp4">
                     </video>
                 </div>
+
+                <div class="search-box">
+                    <div class="input-search">
+                        <!-- <form>
+                            <input type="text" name="query" title="search" placeholder="무엇을 찾고 계신가요?">
+                            <button type="submit">
+                                <i class="xi-search"></i>
+                            </button>
+                        </form> -->
+                        <form action="javascript:searchAction()">
+                            <input type="text" placeholder="무엇을 찾고 계신가요?">
+                            <button>
+                                <i class="xi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="tags">
+                        <a href="">#캠퍼스 가이드북</a>
+                        <a href="">#등록금 분할납부</a>
+                        <a href="">#재입학</a>
+                    </div>
+                </div>
+
             </section>
 
 
@@ -67,222 +92,226 @@
 
                 <div class="allBox">
                     <div class="tabBox">
-                        <div class="tabMenu">
-                            <ul>
-                                <li class="active"><a href="#">공지사항</a></li>
-                                <li><a href="#">교수초빙/직원채용</a></li>
-                                <li><a href="#">학술행사</a></li>
-                                <li><a href="#">취업속보</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="tabContent">
-                            <div class="con1">
+                        <div data-aos="fade-up" data-aos-duration="2000">
+                            <div class="tabMenu">
                                 <ul>
-                                    <li>
-                                        <span>[취업전략과]</span>
-                                        <p>저학년 커리어로드맵 공모전 기간연장 안내</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[K-Digital]</span>
-                                        <p>SW코딩 취업 무료교육 2기 수강생 모집</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[취업전략과]</span>
-                                        <p>공공기관 현장 모의면접 참가자 모집</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[TPC센터]</span>
-                                        <p>공인어학영어 수강료 환급과정 수강생 모집 안내</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[언어교육원]</span>
-                                        <p>2022학년도 11월 외국어(환급)특강 수강생 모집</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
+                                    <li class="active"><a href="#!">공지사항</a></li>
+                                    <li><a href="#!">교수초빙/직원채용</a></li>
+                                    <li><a href="#!">학술행사</a></li>
+                                    <li><a href="#!">취업속보</a></li>
                                 </ul>
                             </div>
 
-                            <div class="con2">
-                                <ul>
-                                    <li>
-                                        <span>[LINC 3.0 사업단]</span>
-                                        <p>사업계약직 공개채용 서류전형 합격자 공고</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[부산산학협력단]</span>
-                                        <p>공개채용 서류전형 합격자 공고</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[사회과학연구원]</span>
-                                        <p>국제전문 자체계약직 채용 공고</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[기초과학연구원]</span>
-                                        <p>해양환경실험실 연구원 채용공고</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[풍력발전미래기술]</span>
-                                        <p>보조연구원(단기근로) 채용 공고</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                            </div>
+                            <div class="tabContent">
+                                <div class="con1">
+                                    <ul>
+                                        <li>
+                                            <span>[취업전략과]</span>
+                                            <p>저학년 커리어로드맵 공모전 기간연장 안내</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[K-Digital]</span>
+                                            <p>SW코딩 취업 무료교육 2기 수강생 모집</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[취업전략과]</span>
+                                            <p>공공기관 현장 모의면접 참가자 모집</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[TPC센터]</span>
+                                            <p>공인어학영어 수강료 환급과정 수강생 모집 안내</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[언어교육원]</span>
+                                            <p>2022학년도 11월 외국어(환급)특강 수강생 모집</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                            <div class="con3">
-                                <ul>
-                                    <li>
-                                        <span>[혁신E-1-2]</span>
-                                        <p>철학과 효원 논리 대제전 안내</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[불어불문학과]</span>
-                                        <p>프랑스 만화가 PLANTU 특별강연</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[문화연구소]</span>
-                                        <p>생명 이:음 인문학강좌 (문화와 생태)</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[의류학과]</span>
-                                        <p>2022년 부산대학교 의류학과 졸업작품전</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[철학과]</span>
-                                        <p>철학과 대동철학회 가을학술대회 개최 안내</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                            </div>
+                                <div class="con2">
+                                    <ul>
+                                        <li>
+                                            <span>[LINC 3.0 사업단]</span>
+                                            <p>사업계약직 공개채용 서류전형 합격자 공고</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[부산산학협력단]</span>
+                                            <p>공개채용 서류전형 합격자 공고</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[사회과학연구원]</span>
+                                            <p>국제전문 자체계약직 채용 공고</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[기초과학연구원]</span>
+                                            <p>해양환경실험실 연구원 채용공고</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[풍력발전미래기술]</span>
+                                            <p>보조연구원(단기근로) 채용 공고</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                            <div class="con4">
-                                <ul>
-                                    <li>
-                                        <span>[모집중]</span>
-                                        <p>인천항만공사</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[모집중]</span>
-                                        <p>BNK저축은행</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[모집중]</span>
-                                        <p>국가철도공단</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[모집중]</span>
-                                        <p>한국식품연구원</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>[모집중]</span>
-                                        <p>국립부산과학관</p>
-                                        <strong>2022-02-02</strong>
-                                    </li>
-                                </ul>
+                                <div class="con3">
+                                    <ul>
+                                        <li>
+                                            <span>[혁신E-1-2]</span>
+                                            <p>철학과 효원 논리 대제전 안내</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[불어불문학과]</span>
+                                            <p>프랑스 만화가 PLANTU 특별강연</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[문화연구소]</span>
+                                            <p>생명 이:음 인문학강좌 (문화와 생태)</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[의류학과]</span>
+                                            <p>2022년 부산대학교 의류학과 졸업작품전</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[철학과]</span>
+                                            <p>철학과 대동철학회 가을학술대회 개최 안내</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="con4">
+                                    <ul>
+                                        <li>
+                                            <span>[모집중]</span>
+                                            <p>인천항만공사</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[모집중]</span>
+                                            <p>BNK저축은행</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[모집중]</span>
+                                            <p>국가철도공단</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[모집중]</span>
+                                            <p>한국식품연구원</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <span>[모집중]</span>
+                                            <p>국립부산과학관</p>
+                                            <strong>2022-02-02</strong>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="etcBox">
-                        <div class="infoBox">
-                            <div class="etcList1">
-                                <ul>
-                                    <li>
-                                        <a href=""><img src="./img/pic1.jpg">
-                                            <div class="caption">
-                                                <img src="./img/etc1.png" alt="">
-                                                <p>부산대학교<br>
-                                                    <span>총동문회</span>
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
+                        <div data-aos="fade-up" data-aos-duration="3000">
+                            <div class="infoBox">
+                                <div class="etcList1">
+                                    <ul>
+                                        <li>
+                                            <a href=""><img src="./img/pic1.jpg">
+                                                <div class="caption">
+                                                    <img src="./img/etc1.png" alt="">
+                                                    <p>부산대학교<br>
+                                                        <span>총동문회</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
 
-                                    <li>
-                                        <a href=""><img src="./img/pic2.jpg">
-                                            <div class="caption">
-                                                <img src="./img/etc2.png" alt="">
-                                                <p>청년일자리<br>
-                                                    <span>(취업정보)</span>
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                        <li>
+                                            <a href=""><img src="./img/pic2.jpg">
+                                                <div class="caption">
+                                                    <img src="./img/etc2.png" alt="">
+                                                    <p>청년일자리<br>
+                                                        <span>(취업정보)</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                            <div class="etcList2">
-                                <ul>
-                                    <li>
-                                        <a href=""><img src="./img/pic3.jpg">
-                                            <div class="caption">
-                                                <img src="./img/etc3.png" alt="">
-                                                <p>PNU International<br>
-                                                    <span>국제처</span>
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
+                                <div class="etcList2">
+                                    <ul>
+                                        <li>
+                                            <a href=""><img src="./img/pic3.jpg">
+                                                <div class="caption">
+                                                    <img src="./img/etc3.png" alt="">
+                                                    <p>PNU International<br>
+                                                        <span>국제처</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
 
-                                    <li>
-                                        <a href=""><img src="./img/pic4.jpg">
-                                            <div class="caption">
-                                                <img src="./img/etc4.png" alt="">
-                                                <p>부산대학교<br>스토어<br>
-                                                    <span>부산대몰</span>
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                        <li>
+                                            <a href=""><img src="./img/pic4.jpg">
+                                                <div class="caption">
+                                                    <img src="./img/etc4.png" alt="">
+                                                    <p>부산대학교<br>스토어<br>
+                                                        <span>부산대몰</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -608,6 +637,7 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.mb.YTPlayer.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/Pnu.js"></script>
 </body>

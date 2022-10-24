@@ -2,18 +2,17 @@ $(function () {
 
 
     //tabBox
-    $(function () {
-        var content = $('.tabContent>div');
-        var menu = $('.tabMenu li');
-        content.hide().eq(0).show();
-        menu.click(function () {
-            menu.removeClass('active');
-            $(this).addClass('active');
 
-            var index = $(this).index();
-            content.hide().eq(index).show();
-        })
-    });
+    var content = $('.tabContent>div');
+    var menu = $('.tabMenu li');
+    content.hide().eq(0).show();
+    menu.click(function () {
+        menu.removeClass('active');
+        $(this).addClass('active');
+
+        var index = $(this).index();
+        content.hide().eq(index).show();
+    })
 
 
 
@@ -59,20 +58,6 @@ $(function () {
 
 
 
-    //Footer toggle
-    $('.Footer .ft_top .right li').on('click', function () {
-        var idx = $(this).index(); // 0,1,2
-        if ($(this).hasClass('on')) {
-            $(this).removeClass('on');
-            $('.Footer .ft_top .content>ul').eq(idx).removeClass('on')
-        } else {
-            $(this).addClass('on').siblings().removeClass('on');
-            $('.Footer .ft_top .content>ul').eq(idx).addClass('on').siblings().removeClass('on');
-        }
-    });
-
-
-
     //Totop
     $('.btn').on('click', function () {
         $('html,body').animate({ scrollTop: 0 }, 200)
@@ -106,7 +91,24 @@ $(function () {
 
 
 
+    $(window).on('scroll', function () {
+        var sct = $(window).scrollTop();
+        sct > 100
+            ? $(".Header").addClass('on')
+            : $(".Header").removeClass('on')
+    })
 
+
+
+    $(document).ready(function () {
+        $('.count').on('click', function () {
+
+        })
+    })
+
+
+
+    AOS.init();
 
 
 })
