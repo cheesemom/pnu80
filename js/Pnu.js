@@ -20,7 +20,7 @@ $(function () {
     new Swiper('.focus .swiper', {
         direction: 'horizontal',
         autoplay: {
-            delay: 3000
+            delay: 2500
         },
         loop: true,
         slidesPerView: 3,
@@ -42,7 +42,7 @@ $(function () {
             // 0에서 countNum이 된다
         },
             {
-                duration: 3000, // 애니메이션이 완료될때까지 걸리는 시간
+                duration: 10000, // 애니메이션이 완료될때까지 걸리는 시간
                 easing: 'linear', // 애니메이션 효과 방식
                 step: function () { // 움직임 각 스텝별로 실행될 함수
                     $this.text(Math.floor(this.countNum));
@@ -91,6 +91,7 @@ $(function () {
 
 
 
+    //menu scroll
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
         sct > 100
@@ -100,16 +101,7 @@ $(function () {
 
 
 
-    $(document).ready(function () {
-        $('.count').on('click', function () {
-
-        })
-    })
-
-
-
     AOS.init();
 
 
 })
-

@@ -4,6 +4,7 @@ span.blue {
 
 body {
     overflow-x: hidden;
+
 }
 
 
@@ -355,6 +356,7 @@ body {
     color: white;
     letter-spacing: 0.6px;
     text-align: left;
+    width: 100%;
 }
 
 .recruit h4 {
@@ -581,44 +583,52 @@ body {
 
 /* Campus */
 .campus {
-    padding: 180px 0;
+    width: 100%;
+    padding: 300px 0;
+    position: relative;
 }
 
-.campus h2 {
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 66px;
-    text-align: center;
+.campus .number {
+    position: absolute;
+    box-sizing: border-box;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .campus .count {
-    background: url(../img/campus.jpg) no-repeat center center/cover;
-    height: 550px;
-    letter-spacing: 0.6px;
-    margin: 0 auto;
-    padding: 220px;
-}
-
-.box {
+    width: 28vmin;
+    height: 28vmin;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 70%;
-    font-style: italic;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    border-radius: 10%;
+    border: 1px solid #e0e0e0;
+    border-bottom: 20px solid #004C86;
 }
 
-.count-num {
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
+.number i {
     color: #004C86;
+    font-size: 40px;
+    text-align: center;
 }
 
-.ja {
-    font-size: 16px;
-    font-weight: 300;
+.number p.count-num {
+    color: black;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.number p.text {
+    color: black;
+    font-size: 15px;
     text-align: center;
-    margin-bottom: 25px;
 }
 
 
@@ -627,6 +637,7 @@ body {
 .Footer {
     border-top: 1px solid white;
     font-weight: 300;
+    width: 100%;
 }
 
 .Footer .menu {
