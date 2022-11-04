@@ -4,7 +4,6 @@ span.blue {
 
 body {
     overflow-x: hidden;
-
 }
 
 
@@ -516,7 +515,7 @@ body {
 }
 
 .research .case .num {
-    font-size: 26px;
+    font-size: 30px;
     color: #004C86;
 }
 
