@@ -62,7 +62,7 @@ body {
     height: 35px;
     transition: 0.4s;
     line-height: 1.2;
-    border-bottom: 1px solid #d6d6d4;
+    border-bottom: 0.5px solid rgba(196, 196, 196, 0.5);
 }
 
 .Header .TopBanner .inner {
@@ -94,7 +94,7 @@ body {
     left: -15px;
     width: 1px;
     height: 10px;
-    background: #d6d6d4;
+    background: rgba(196, 196, 196, 0.5);
     transform: translateY(-50%);
 }
 
@@ -187,14 +187,21 @@ body {
     width: 100%;
     margin: 0 auto;
     letter-spacing: 0.6px;
-    padding: 180px 200px;
+    padding: 100px;
 }
 
 .pnu h2 {
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
+}
+
+.allBox {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
 }
 
 .pnu p {
@@ -206,30 +213,30 @@ body {
 }
 
 .tabBox {
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: inline-block;
-    padding: 75px;
+    padding-bottom: 50px;
 }
 
 .tabMenu>ul {
     display: flex;
-    width: 90%;
+    width: 100%;
 }
 
 .tabMenu li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 47px;
     border: 1px solid #bbb;
-    font-size: 14px;
+    font-size: 13px;
     flex: 1;
     background: #f3f6f8be;
 }
 
 .tabMenu li.active {
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: none;
     background: #fff;
 }
@@ -242,17 +249,9 @@ body {
 }
 
 .tabContent {
-    width: 90%;
+    width: 100%;
     position: relative;
     text-align: center;
-}
-
-.tabContent>.con1,
-.con2,
-.con3,
-.con4 {
-    padding: 10px 20px 0 20px;
-    width: 100%;
 }
 
 .tabContent li {
@@ -262,17 +261,16 @@ body {
 
 .tabContent li span {
     margin-left: 20px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 3.5;
+    line-height: 4;
     float: left;
 }
 
 .tabContent li p {
     display: inline-block;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 3.7;
+    font-size: 12px;
+    line-height: 4.2;
 }
 
 .tabContent li strong {
@@ -283,12 +281,8 @@ body {
     float: right;
 }
 
-.allBox {
-    display: flex;
-}
-
 .etcBox {
-    width: 40%;
+    width: 50%;
     display: inline-block;
 }
 
@@ -384,7 +378,7 @@ body {
     margin: 0 auto;
     letter-spacing: 0.6px;
     text-align: center;
-    padding: 180px;
+    padding: 100px;
 }
 
 .focus .swiper {
@@ -392,7 +386,7 @@ body {
 }
 
 .focus h2 {
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 700;
     margin-bottom: 66px;
 }
@@ -424,12 +418,12 @@ body {
     margin: 0 auto;
     letter-spacing: 0.6px;
     text-align: center;
-    padding: 180px 0;
+    padding: 100px;
     background: #f9f9f9;
 }
 
 .research h2 {
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -500,22 +494,22 @@ body {
 }
 
 .research .content_box strong {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 500;
     display: block;
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
     line-height: 1.3;
 }
 
 .research .content_box p {
     font-size: 14px;
     font-weight: 300;
-    line-height: 1.4;
-    min-height: 130px;
+    line-height: 1.5;
+    margin: 0 0 40px 0;
 }
 
 .research .case .num {
-    font-size: 30px;
+    font-size: 26px;
     color: #004C86;
 }
 
@@ -530,15 +524,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 1300px;
+    max-width: 1250px;
 }
 
 .research .slide_handler i {
-    padding: 15px 15px;
+    padding: 14px 14px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
 }
 
@@ -559,11 +553,11 @@ body {
 
 .research .slick-dots li {
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     background: #dddddd;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 7px;
     cursor: pointer;
 }
 
@@ -580,7 +574,8 @@ body {
 /* Campus */
 .campus {
     width: 100%;
-    padding: 300px 0;
+    box-sizing: border-box;
+    padding: 300px;
     position: relative;
     letter-spacing: 0.6px;
 }
@@ -588,7 +583,7 @@ body {
 .campus .number {
     position: absolute;
     box-sizing: border-box;
-    width: 80vw;
+    gap: 45px;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -597,8 +592,8 @@ body {
 }
 
 .campus .count {
-    width: 28vmin;
-    height: 28vmin;
+    width: 260px;
+    height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -615,17 +610,14 @@ body {
 }
 
 .number p.count-num {
-    color: black;
     display: grid;
     place-items: center;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .number p.text {
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -682,6 +674,8 @@ body {
     font-size: 12px;
     padding-top: 20px;
     border: 1px solid #d6d6d4;
+    border-top: none;
+    border-bottom: none;
     color: white;
     background: #004C86 url(../img/topBtn.png) no-repeat 50% 18px;
 }

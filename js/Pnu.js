@@ -1,8 +1,10 @@
 $(function () {
 
+    AOS.init();
+
+
 
     //tabBox
-
     var content = $('.tabContent>div');
     var menu = $('.tabMenu li');
     content.hide().eq(0).show();
@@ -91,7 +93,7 @@ $(function () {
 
 
 
-    //menu scroll
+    //menu
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
         sct > 100
@@ -100,8 +102,6 @@ $(function () {
     })
 
 
-
-    AOS.init();
 
 
 })
